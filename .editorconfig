@@ -1,0 +1,14 @@
+# http://editorconfig.org
+
+root = true
+
+# 所有文件
+[*]
+end_of_line              = crlf
+indent_style             = space
+insert_final_newline     = true
+trim_trailing_whitespace = true
+
+[*.md]
+charset                  = utf-8
+trim_trailing_whitespace = false
