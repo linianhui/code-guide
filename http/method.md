@@ -11,8 +11,9 @@
 ## HTTP Method 语义列表
 
 每一个`HTTP Method`都具有一下两个HTTP协议层面的语义。
+
 | HTTP 语义 | 含义 |
-|-----------|-----|
+|----------|-----|
 | [安全] | 操作不会对资源产生副作用，不会修改资源。|
 | [幂等] | 执行一次和重复执行N次，结果是一样的。|
 
@@ -29,18 +30,18 @@
 >`PATCH`语义上的`安全`和`幂等`的行为和`POST`完全一致，差异在于`PATCH`仅是用于部分更新资源。`PATCH`是一个可选支持的`HTTP Method`，可能会存在一些代理、网关等组件不支持的情况，所以推荐用`POST`来代替它。
 
 
-[HTTP Method]:(https://tools.ietf.org/html/rfc7231#section-4) (HTTP/1.1 RFC7231 - HTTP Method)
+[HTTP Method]:https://tools.ietf.org/html/rfc7231#section-4
 
-[安全]:(https://tools.ietf.org/html/rfc7231#section-4.2.1) (HTTP/1.1 RFC7231 - HTTP Method - Safe Methods)
+[安全]:https://tools.ietf.org/html/rfc7231#section-4.2.1
 
-[幂等]:(https://tools.ietf.org/html/rfc7231#section-4.2.2) (HTTP/1.1 RFC7231 - HTTP Method - Idempotent Methods)
+[幂等]:https://tools.ietf.org/html/rfc7231#section-4.2.2
 
-[GET]:(https://tools.ietf.org/html/rfc7231#section-4.3.1) (HTTP/1.1 RFC7231 - HTTP Method - GET)
+[GET]:https://tools.ietf.org/html/rfc7231#section-4.3.1
 
-[POST]:(https://tools.ietf.org/html/rfc7231#section-4.3.3) (HTTP/1.1 RFC7231 - HTTP Method - POST)
+[POST]:https://tools.ietf.org/html/rfc7231#section-4.3.3
 
-[PUT]:(https://tools.ietf.org/html/rfc7231#section-4.3.4) (HTTP/1.1 RFC7231 - HTTP Method - PUT)
+[PUT]:https://tools.ietf.org/html/rfc7231#section-4.3.4
 
-[DELETE]:(https://tools.ietf.org/html/rfc7231#section-4.3.5) (HTTP/1.1 RFC7231 - HTTP Method - DELETE)
+[DELETE]:https://tools.ietf.org/html/rfc7231#section-4.3.5
 
-[PATCH]:(https://tools.ietf.org/html/rfc5789) (HTTP/1.1 RFC5789 - HTTP Method - PATCH)
+[PATCH]:https://tools.ietf.org/html/rfc5789
