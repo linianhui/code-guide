@@ -14,8 +14,9 @@ HTTP APIs中常用到的Headers：
 | [Accept]           | 客户端期望服务器返回的数据格式。   | `Accept:application/json` |
 | [Accept-Charset]   | 客户端期望服务器返回的数据的字符集。| `Accept-Charset:utf-8` |
 | [Content-Type]     | 描述`Body`的数据类型。           | `Content-Type:application/json`
-| [Content-Encoding] | 描述`Body`的编码方式。            |`Content-Encoding: gzip`|
-| [Location]         | `Response`中提供给客户端的连接    | `Location: /user/1`|
+| [Content-Encoding] | 描述`Body`的编码方式。           | `Content-Encoding: gzip`|
+| [Content-Length]   | 描述`Body`的长度。              | `Content-Length: 1234`|
+| [Location]         | `Response`中提供给客户端的连接   | `Location: /user/1`|
 
 ## 示例
 
@@ -60,5 +61,7 @@ https://tools.ietf.org/html/rfc7231#section-7
 [Content-Type]:https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type
 
 [Content-Encoding]:https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Encoding
+
+[Content-Length]:https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Length
 
 [Location]:https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Location
