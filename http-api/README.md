@@ -27,3 +27,20 @@ HTTP APIs的组成部分（`资源`，`URL`，`表述`，`JSON`）。
 1. 基于`URL`标识`资源`。
 1. 通过`URL`基于`表述`操作`资源`。
 1. 基于`JSON`承载`表述`。
+
+
+[HTTP Header]
+
+[HTTP Method]
+
+[HTTP Stauts Code]
+
+[URL Component]
+
+[命名规则]
+
+[HTTP Header]:http-header.md
+[HTTP Method]:http-method.md
+[HTTP Stauts Code]:http-status-code.md
+[URL Component]:url-component.md
+[命名规则]:naming-convention.md
