@@ -19,15 +19,21 @@
 
 ## HTTP Method 列表
 
-| HTTP Method | 描述 | `安全` | `幂等` |
-|-----------|----|-------|--------|
-| [GET] | 获取一个资源 | 是 | 是 |
-| [PUT] | 更新或创建一个资源（完整替换） | 否| 是 |
-| [PATCH] | 更新一个资源（部分更新） | 否 | 否 |
-| [DELETE] | 删除一个资源 |否|是|
-| [POST] | 创建，或者不满足以上四个Method语义的所有操作 | 否 | 否 |
+| HTTP Method | 安全 | 幂等 | 描述说明  |
+|-------------|-----|-----|----------|
+| [GET]       | ✔   | ✔   | 获取一个资源 | 
+| [PUT]       | ✘   | ✔   | 更新或创建一个资源（完整替换） | 
+| [PATCH]     | ✘   | ✘   | 更新一个资源（部分更新） | 
+| [DELETE]    | ✘   | ✔   | 删除一个资源 |
+| [POST]      | ✘   | ✘   | 创建，或者不满足以上四个Method语义的所有操作 |
 
 >`PATCH`语义上的`安全`和`幂等`的行为和`POST`完全一致，差异在于`PATCH`仅是用于部分更新资源。`PATCH`是一个可选支持的`HTTP Method`，可能会存在一些代理、网关等组件不支持的情况，所以推荐用`POST`来代替它。
+
+# 参考
+
+https://tools.ietf.org/html/rfc7231#section-4
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods
 
 
 [HTTP Method]:https://tools.ietf.org/html/rfc7231#section-4
