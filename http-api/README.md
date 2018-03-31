@@ -14,10 +14,10 @@ HTTP APIs 四大组成部分（HTTP,URI,MIME,JSON）
 1. JSON : http://json.org/
 1. JSON Schema: http://json-schema.org/
 
-格式化：
+URL模板和时间日期格式化：
 1. URI Template ( RFC6570 ) ：https://tools.ietf.org/html/rfc6570
 1. Date and Time Formats - ISO 8601：https://www.w3.org/TR/NOTE-datetime
-1. Date and Time on the Internet: Timestamps ( RFC 3339 ) ：https://www.ietf.org/rfc/rfc3339.txt
+1. Date and Time on the Internet: Timestamps ( RFC 3339 ) ：https://tools.ietf.org/html/rfc3339#section-5.6
 
 
 # HTTP APIs 规范指南
