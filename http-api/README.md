@@ -1,4 +1,13 @@
-# 参考
+# HTTP APIs 规范指南
+
+HTTP APIs的组成部分（`资源`，`URL`，`表述`，`JSON`）。
+1. 基于`资源`设计API。
+1. 基于`URL`标识`资源`。
+1. 通过`URL`基于`表述`操作`资源`。
+1. 基于`JSON`承载`表述`。
+
+
+# 参考资料
 
 PayPal的API设计指南：https://github.com/paypal/api-standards
 
@@ -18,15 +27,6 @@ URL模板和时间日期格式化：
 1. URI Template ( RFC6570 ) ：https://tools.ietf.org/html/rfc6570
 1. Date and Time Formats - ISO 8601：https://www.w3.org/TR/NOTE-datetime
 1. Date and Time on the Internet: Timestamps ( RFC 3339 ) ：https://tools.ietf.org/html/rfc3339#section-5.6
-
-
-# HTTP APIs 规范指南
-
-HTTP APIs的组成部分（`资源`，`URL`，`表述`，`JSON`）。
-1. 基于`资源`设计API。
-1. 基于`URL`标识`资源`。
-1. 通过`URL`基于`表述`操作`资源`。
-1. 基于`JSON`承载`表述`。
 
 
 [HTTP Header]
