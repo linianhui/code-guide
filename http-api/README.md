@@ -35,12 +35,15 @@ HTTP APIs的组成部分（`资源`，`URL`，`表述`，`JSON`）。
 
 [HTTP Stauts Code]
 
-[URL Component]
+[URL]
 
 [命名规则]
+
+[国际化]
 
 [HTTP Header]:http-header.md
 [HTTP Method]:http-method.md
 [HTTP Stauts Code]:http-status-code.md
-[URL Component]:url-component.md
-[命名规则]:naming-convention.md
+[URL]:url.md
+[命名规则]:name-case.md
+[国际化]:i18n.md
