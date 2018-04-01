@@ -18,7 +18,11 @@
 
 >URL的query部分是`name=value`而不是`key=value`，URL支持name重复存在，Web服务端框架绝大部分都支持直接映射为数组。此外命名规则约束的是`name`部分，而不关心`value`部分，`value`部分应该采用`urlencode`进行编码。
 
-示例：`https://api.my-server.com/v1/user-stories?dipplay_names=abc&display_names=efg`，服务端会得到一个类型为数组的`dispaly_names`参数。
+示例：
+```http
+https://api.my-server.com/v1/user-stories?dipplay_names=abc&display_names=efg
+```
+服务端会得到一个类型为数组的`dispaly_names`参数。
 ```json
 display_names = [
   "abc",
