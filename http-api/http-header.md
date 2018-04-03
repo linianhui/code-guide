@@ -39,11 +39,11 @@ HTTP/1.1 201 Created
 Content-Type: application/json;charset=utf-8
 Content-Encoding: gzip
 Location: /xxx/1
-X-Request-Id: {id}
+Request-Id: {id}
 
 ```
 
->`X-Request-Id`可以由`Http Request`传入，也可以由服务端生成，追加此信息到`log`中，便于服务端追踪请求调用链。
+>`Request-Id`可以由`Http Request`传入，也可以由服务端生成，追加此信息到`log`中，便于服务端追踪请求。
 
 # 参考
 
