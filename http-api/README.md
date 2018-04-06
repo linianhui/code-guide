@@ -116,7 +116,7 @@ HTTP APIs主要由四部分组成：`HTTP`,`URL`,`资源`，`资源的表述(JSO
     }
     ```
 
-## 2.4 Request公共查询参数
+## 2.4 Request 公共查询参数
 
 | 参数用途 | 参数名 | 取值范围|
 |---------|-------|-------|
@@ -129,7 +129,26 @@ HTTP APIs主要由四部分组成：`HTTP`,`URL`,`资源`，`资源的表述(JSO
 ```http
 GET /users?page=2&page_size=10&sort=name,age|desc&created_at_after=2018-01-01&created_at_before=2018-06-01 HTTP/1.1
 ```
+
 上面的查询代表的含义：按照`name`升序和`age`倒序的排序方式；获取`created_at`时间位于`2018-01-01`和`2018-06-01`区间内；按照每页`10`条数据，获取第`2`页的数据。
+
+## 2.5 Response 分页数据结构
+
+在分页请求的时候，API会返回分页后的数据和分页的信息。
+```json
+{
+  "page": 2,
+  "page_size": 10,
+  "total_count": 100,
+  "items":[
+    {...},
+    {...},
+  ]
+}
+```
+# 3 示例
+
+... 待补充
 
 # 参考资料
 
