@@ -121,7 +121,7 @@ HTTP APIs主要由四部分组成：`HTTP`,`URL`,`资源`，`资源的表述(JSO
 | 参数用途 | 参数名 | 取值范围|
 |---------|-------|-------|
 | 分页     |`page`<br/>`page_size`| >=1 |
-| 排序     | `sort` |`{field_name}|{asc|desc},{field_name}|{asc|desc}`|
+| 排序     | `sort` |`{field_name}\|{asc\|desc},{field_name}\|{asc\|desc}`|
 | 区间     |`{field_name}_before`<br/>`{field_name}_after`| 无要求|
 | 时间     |`{field_name}_at`|无要求|
 
