@@ -56,6 +56,7 @@ HTTP APIs主要由四部分组成：`HTTP`,`URL`,`资源`，`资源的表述(JSO
 
 # 2 规范指南
 
+## 2.1 通用部分 
 1. [HTTP Method 规范][HTTP Method]
 1. [HTTP Header 规范][HTTP Header]
 1. [HTTP Stauts Code 规范][HTTP Stauts Code]
@@ -64,8 +65,25 @@ HTTP APIs主要由四部分组成：`HTTP`,`URL`,`资源`，`资源的表述(JSO
 1. [日期和时间格式化 规范][Date Time]
 1. [国际化 规范][i18n]
 
-# 3 最佳实践
-...未完成
+## 2.2 API版本化
+在`Level 2`的HTTP APIs中，虽然我们推荐也努力使得我们的APIs不做不兼容的改动，但是依然无法彻底的避免不兼容的升级。这就使得我们不得不进行对APIs进行版本管理。通常有以下**3**种方案：
+1. URL
+    ```http
+    GET http://api.linianhui.com/v1/resources HTTP/1.1
+    ```
+1. Request Header
+    ```http
+    GET http://api.linianhui.com/resources HTTP/1.1
+    Api-Version: v1
+    ```
+1. Request Header (Accept Header)
+    ```http
+    GET http://api.linianhui.com/resources HTTP/1.1
+    Accept: application/vnd.v1+json
+    ```
+**在`Level 2`中优先推荐使用方案1**。理由是其更直观，便于实现，便于日志追踪。
+
+## 3.2 
 
 # 参考资料
 
