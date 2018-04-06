@@ -7,7 +7,7 @@
    2. `取消禁用`：`DELETE /users/disabled/{user_id}`。
    3. `获取被禁用的用户列表`：`GET /users/disabled`。
 2. 如果上面的方式无法满足需要，则可以采用`POST`和`URL/动词`的组合。还拿上面的举例：
-   1. `禁用用户`：`POST /users/{user_id}/disable`。
+   1. `禁用用户`：`POST /users/{user_id}/disable`或者`PUT /users/{user_id}/disable`。
    2. `取消禁用`：`DELETE /users/{user_id}/disable`。
    3. `获取被禁用的用户列表`：`GET /users?status=DISABLED`。
 
