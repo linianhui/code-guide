@@ -61,6 +61,7 @@ HTTP APIs主要由四部分组成：`HTTP`,`URL`,`资源`，`资源的表述(JSO
 1. [HTTP Header 规范][HTTP Header]
 1. [HTTP Stauts Code 规范][HTTP Stauts Code]
 1. [URL 规范][URL]
+1. [JSON 规范][JSON]
 1. [命名（URL和JSON）规范][Name Case]
 1. [日期和时间格式化 规范][Date Time]
 1. [国际化 规范][i18n]
@@ -153,4 +154,5 @@ REST APIs 成熟度模型：https://martinfowler.com/articles/richardsonMaturity
 [Name Case]:name-case.md
 [Date Time]:date-time.md
 [URL]:url.md
+[JSON]:json.md
 [i18n]:i18n.md

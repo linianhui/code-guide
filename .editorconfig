@@ -12,3 +12,4 @@ trim_trailing_whitespace = true
 [*.md]
 charset                  = utf-8
 trim_trailing_whitespace = false
+indent_size              = 2
