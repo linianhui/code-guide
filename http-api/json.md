@@ -28,7 +28,7 @@ JSON示例：
   "country_code":"CN",
   "currency_code":"CNY",
   "language_code":"zh",
-  "locale_code":"zh_CN",
+  "locale_code":"zh-CN",
   "created_at":"2018-01-02T03:04:05.128Z+08:00",
   "time_zone":"+08:00"
 }
