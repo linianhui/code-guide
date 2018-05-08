@@ -91,11 +91,11 @@ HTTP APIs主要由四部分组成：`HTTP`,`URL`,`资源`，`资源的表述(JSO
   "is_error":true,
   "errors":[
     {
-      "code":"user_name",
+      "error":"user_name",
       "message":"用户名不能为空。"
     },
     {
-      "code":"age",
+      "error":"age",
       "message":"用户年龄不能小于0。"
     }
   ]
@@ -109,7 +109,7 @@ HTTP APIs主要由四部分组成：`HTTP`,`URL`,`资源`，`资源的表述(JSO
       "is_error":true,
       "errors":[
         {
-          "code":"no_permission",
+          "error":"no_permission",
           "message":"没有user.delete的权限"
         }
       ]
