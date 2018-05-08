@@ -91,26 +91,26 @@ HTTP APIs主要由四部分组成：`HTTP`,`URL`,`资源`，`资源的表述(JSO
   "is_error":true,
   "errors":[
     {
-      "error":"user_name",
-      "message":"用户名不能为空。"
+      "error": "user_name",
+      "message": "用户名不能为空。"
     },
     {
-      "error":"age",
-      "message":"用户年龄不能小于0。"
+      "error": "age",
+      "message": "用户年龄不能小于0。"
     }
   ]
 }
 ```
 1. 这个数据结构仅在状态码为`4xx`和`5xx`出现的时候才会使用；`2xx`的时候则不包含此数据结构。
 2. `is_error`永远为`true`，此举是便于客户端识别响应的数据结构。
-3. `code`字段可以是一些出错的字段名、某一错误类别（比如`no_permission`）等等。
+3. `error`字段可以是一些出错的字段名、某一错误类别（比如`no_permission`）等等。
     ```json
     {
       "is_error":true,
       "errors":[
         {
-          "error":"no_permission",
-          "message":"没有user.delete的权限"
+          "error": "no_permission",
+          "message": "没有user.delete的权限"
         }
       ]
     }
