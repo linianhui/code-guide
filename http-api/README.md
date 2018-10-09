@@ -120,7 +120,12 @@ HTTP APIs主要由四部分组成：`HTTP`,`URL`,`资源`，`资源的表述(JSO
 
 示例:
 ```http
-GET /users?page=2&page_size=10&sort=name,age|desc&created_at_after=2018-01-01&created_at_before=2018-06-01 HTTP/1.1
+GET /users
+    ?page=2
+    &page_size=10
+    &sort=name,age|desc
+    &created_at_after=2018-01-01
+    &created_at_before=2018-06-01
 ```
 
 上面的查询代表的含义：按照`name`升序和`age`倒序的排序方式；获取`created_at`时间位于`2018-01-01`和`2018-06-01`区间内；按照每页`10`条数据，获取第`2`页的数据。
