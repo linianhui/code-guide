@@ -2,8 +2,8 @@
 URL遵循[RFC 3986]规范，由以下几部分组成。
 
 <pre>
-  https://api.linianhui.test:8080/users/disabled?first_name=li#title
-  \___/  \______________________/\_____________/\____________/\____/
+  https://api.linianhui.test:8080/user/disabled?first_name=li#title
+  \___/  \______________________/\_____________/\___________/\____/
     |               |                   |             |          |
   scheme        authority              path         query    fragment
 </pre>

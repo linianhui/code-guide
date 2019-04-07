@@ -29,30 +29,34 @@ HTTP APIs主要由四部分组成：`HTTP`,`URL`,`资源`，`资源的表述(JSO
 
 | 资源      | URL               |
 |----------|-------------------|
-| 天气      | `/weathers`       |
-| 今天的天气 | `/weathers/today` |
-| 今天的天气 | `/weathers/2018-04-01`，今天是2018-04-01 |
+| 天气      | `/weather`       |
+| 今天的天气 | `/weather/today` |
+| 今天的天气 | `/weather/2018-04-01`，今天是2018-04-01 |
 
-`资源`体现在`URL`中的`Path`部分；如果资源代表的是一个集合，则以复数的形式出现。
+`资源`体现在`URL`中的`Path`部分。
+>关于资源名采用单数还是复数的问题，这里统一为单数（即使代表的是一个集合资源）。原因有3：
+>   1. 一致性：中文中并无复数的概念，可保持一致。
+>   2. 无二义性：比如news，既是单数也是复数。所以就不必追求它们的单数或者复数形式形式；基于同样的原则，那么原本就是单数的名词，也无需刻意追求复数形式。
+>   3. 简单性：英文名词的复数形式并不统一（比如order > orders, history > histories）,使用单数可以避免团队成员对于这些差异的不同理解与争执。
 
-`资源`存在子资源的情况下，可以把子资源提升为顶层的资源。比如有一个订单资源`/orders/{order_id}`，订单中包含2件物品。
+`资源`存在子资源的情况下，可以把子资源提升为顶层的资源。比如有一个订单资源`/order/{order_id}`，订单中包含2件物品。
 ```
 # 不推荐 单个子资源
-/orders/{order_id}/items/{item_id}
+/order/{order_id}/item/{item_id}
 
 # 推荐 单个子资源
-/order-items/{order_item_id}
+/order-item/{order_item_id}
 
 # 推荐 子资源集合
-/orders/{order_id}/items
+/order/{order_id}/item
 ```
 ## 1.3 基于`JSON`和`HTTP`操作`URL`标识的`资源`
 
 在标识出`资源`以后，就可以使用`HTTP`通过`JSON`来操作资源了。
 1. 使用`HTTP Method`来映射对资源的操作请求（CRUD或者其他）。
-1. 使用`HTTP Header`携带请求/响应所需的元数据信息。
-1. 使用`HTTP Stauts Code`代表`HTTP协议层面`的响应状态。
-1. 使用`JSON`作为数据交换格式。
+2. 使用`HTTP Header`携带请求/响应所需的元数据信息。
+3. 使用`HTTP Stauts Code`代表`HTTP协议层面`的响应状态。
+4. 使用`JSON`作为数据交换格式。
 
 # 2 规范指南
 
@@ -120,7 +124,7 @@ HTTP APIs主要由四部分组成：`HTTP`,`URL`,`资源`，`资源的表述(JSO
 
 示例:
 ```http
-GET /users
+GET /user
     ?page=2
     &page_size=10
     &sort=name,age|desc

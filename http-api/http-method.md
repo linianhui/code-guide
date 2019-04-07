@@ -2,14 +2,14 @@
 
 面向资源设计的HTTP APIs中，绝大部分的操作都是`CRUD(Create,Read,Update,Delete)`，都可以映射为某一个[HTTP Method]。其余的无法映射的操作一般存在两种解决方案：
 
-1. 抽象出新的资源，比如`禁用用户`的操作。假设用户的资源是`/users`，那么可以抽象出来一个被锁定的用户的资源`/users/disabled`。如此以来，
-   1. `禁用用户`：`POST /users/disabled`或者`PUT /users/disabled/{user_id}`。
-   2. `取消禁用`：`DELETE /users/disabled/{user_id}`。
-   3. `获取被禁用的用户列表`：`GET /users/disabled`。
+1. 抽象出新的资源，比如`禁用用户`的操作。假设用户的资源是`/user`，那么可以抽象出来一个被锁定的用户的资源`/user/disabled`。如此以来，
+   1. `禁用用户`：`POST /user/disabled`或者`PUT /user/disabled/{user_id}`。
+   2. `取消禁用`：`DELETE /user/disabled/{user_id}`。
+   3. `获取被禁用的用户列表`：`GET /user/disabled`。
 2. 如果上面的方式无法满足需要，则可以采用`POST`和`URL/动词`的组合。还拿上面的举例：
-   1. `禁用用户`：`POST /users/{user_id}/disable`或者`PUT /users/{user_id}/disable`。
-   2. `取消禁用`：`DELETE /users/{user_id}/disable`。
-   3. `获取被禁用的用户列表`：`GET /users?status=DISABLED`。
+   1. `禁用用户`：`POST /user/{user_id}/disable`或者`PUT /user/{user_id}/disable`。
+   2. `取消禁用`：`DELETE /user/{user_id}/disable`。
+   3. `获取被禁用的用户列表`：`GET /user?status=DISABLED`。
 
 ## HTTP Method 语义列表
 
