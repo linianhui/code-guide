@@ -27,10 +27,10 @@ HTTP APIs主要由四部分组成：`HTTP`,`URL`,`资源`，`资源的表述(JSO
 
 比如上面提到的`天气`和`今天的天气`这两个资源，可以用如下的`URL`进行标识。
 
-| 资源      | URL               |
-|----------|-------------------|
-| 天气      | `/weather`       |
-| 今天的天气 | `/weather/today` |
+| 资源       | URL                                     |
+| ---------- | --------------------------------------- |
+| 天气       | `/weather`                              |
+| 今天的天气 | `/weather/today`                        |
 | 今天的天气 | `/weather/2018-04-01`，今天是2018-04-01 |
 
 `资源`体现在`URL`中的`Path`部分。
@@ -69,58 +69,18 @@ HTTP APIs主要由四部分组成：`HTTP`,`URL`,`资源`，`资源的表述(JSO
 1. [命名（URL和JSON）规范][Name Case]
 1. [日期和时间格式化 规范][Date Time]
 1. [国际化 规范][i18n]
+1. [版本化 规范][versioning]
+1. [错误处理 规范][error]
 
-## 2.2 API版本化
-在`Level 2`的HTTP APIs中，虽然我们推荐也努力使得我们的APIs不做不兼容的改动，但是依然无法彻底的避免不兼容的升级。这就使得我们不得不进行对APIs进行版本管理。通常有以下**3**种方案：
-1. URL
-    ```http
-    GET http://api.linianhui.com/v1/resources HTTP/1.1
-    ```
-1. Request Header
-    ```http
-    GET http://api.linianhui.com/resources HTTP/1.1
-    Api-Version: v1
-    ```
-1. Request Header (Accept Header)
-    ```http
-    GET http://api.linianhui.com/resources HTTP/1.1
-    Accept: application/vnd.v1+json
-    ```
-**在`Level 2`中优先推荐使用方案1**。理由是其更直观，便于实现，便于日志追踪。
 
-## 2.3 错误处理
-虽然`HTTP Stauts Code`有`4xx`和`5xx`的状态码来表示哪里出错了，但是其代表的只是`HTTP协议层面`的错误描述，它无法提供和业务相关的更具体错误描述。基于此种情况，我们需要设计一套描述业务层面错误的数据结构：
-```json
-[
-  {
-    "error": "user_name",
-    "message": "用户名不能为空。"
-  },
-  {
-    "error": "age",
-    "message": "用户年龄不能小于0。"
-  }
-]
-```
-1. 这个数据结构仅在状态码为`4xx`和`5xx`出现的时候才会使用；`2xx`的时候则不包含此数据结构。
-2. `error`字段可以是一些出错的字段名、某一错误类别（比如`no_permission`）等等。
-    ```json
-    [
-      {
-        "error": "no_permission",
-        "message": "没有user.delete的权限"
-      }
-    ]
-    ```
+## 2.2 Request 公共查询参数
 
-## 2.4 Request 公共查询参数
-
-| 参数用途 | 参数名 | 取值范围|
-|---------|-------|-------|
-| 分页     |`page`<br/>`page_size`| >=1 |
-| 排序     | `sort` |`{field_name}\|{asc\|desc},{field_name}\|{asc\|desc}`|
-| 区间     |`{field_name}_before`<br/>`{field_name}_after`| 无要求|
-| 时间     |`{field_name}_at`|无要求|
+| 参数用途 | 参数名                                         | 取值范围                                              |
+| -------- | ---------------------------------------------- | ----------------------------------------------------- |
+| 分页     | `page`<br/>`page_size`                         | >=1                                                   |
+| 排序     | `sort`                                         | `{field_name}\|{asc\|desc},{field_name}\|{asc\|desc}` |
+| 区间     | `{field_name}_before`<br/>`{field_name}_after` | 无要求                                                |
+| 时间     | `{field_name}_at`                              | 无要求                                                |
 
 示例:
 ```http
@@ -134,7 +94,7 @@ GET /user
 
 上面的查询代表的含义：按照`name`升序和`age`倒序的排序方式；获取`created_at`时间位于`2018-01-01`和`2018-06-01`区间内；按照每页`10`条数据，获取第`2`页的数据。
 
-## 2.5 Response 分页数据结构
+## 2.3 Response 分页数据结构
 
 在分页请求的时候，API会返回分页后的数据和分页的信息。
 ```json
@@ -192,3 +152,5 @@ REST APIs 成熟度模型：https://martinfowler.com/articles/richardsonMaturity
 [URL]:url.md
 [JSON]:json.md
 [i18n]:i18n.md
+[versioning]:versioning.md
+[error]:error.md
