@@ -1,3 +1,5 @@
+# Moved to https://linianhui.github.io/code-guide/
+
 # HTTP APIs 设计/规范指南
 
 根据REST APIs的成熟度模型 ，此规范关注的是`Level 2`的APIs。
