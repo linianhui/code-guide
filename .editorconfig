@@ -2,14 +2,13 @@
 
 root = true
 
-# 所有文件
 [*]
-end_of_line              = crlf
+charset                  = utf-8
+end_of_line              = lf
 indent_style             = space
+indent_size              = 2
 insert_final_newline     = true
 trim_trailing_whitespace = true
 
 [*.md]
-charset                  = utf-8
 trim_trailing_whitespace = false
-indent_size              = 2
