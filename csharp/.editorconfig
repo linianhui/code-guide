@@ -6,37 +6,31 @@
 
 root = true
 
-# 所有文件
 [*]
-charset      = utf-8
-end_of_line  = crlf
-indent_style = space
-
-# C# 文件
-[*.cs]
-indent_size              = 4
+charset                  = utf-8
+end_of_line              = lf
+indent_style             = space
+indent_size              = 2
 insert_final_newline     = true
 trim_trailing_whitespace = true
 
-# Shell文件
-[*.sh]
-end_of_line = lf
-
-[*.ps1]
-charset     = utf-8-bom
+[*.cs]
+end_of_line = crlf
 indent_size = 4
 
-# YAML 文件
-[*.yml]
-indent_size = 2
+[*.cake]
+end_of_line = crlf
+indent_size = 4
 
-# JS 文件
-[*.{js,ts,json}]
-indent_size = 2
+[*.ps1]
+end_of_line = crlf
+indent_size = 4
 
-# XML 文件
-[*.{xml,csproj,dcproj,props,targets,config,nuspec}]
-indent_size = 2
+[*.csproj]
+indent_size = crlf
+
+[*.sln]
+indent_size = crlf
 
 
 # C# 命名规则
